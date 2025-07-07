@@ -1,3 +1,15 @@
+function FeatureCard({ title, label, href }) {
+  return (
+    <a
+      href={href}
+      className="flex flex-col justify-between p-6 bg-white rounded-xl border border-[#6D1C35]/20 shadow hover:shadow-md hover:border-[#6D1C35]/40 transition text-left"
+    >
+      <p className="text-sm text-gray-500">{label}</p>
+      <h3 className="text-2xl font-bold text-[#6D1C35] mt-2">{title}</h3>
+    </a>
+  );
+}
+
 export default function ProchesApp() {
   return (
     <div className="min-h-screen bg-[#FAF7EF] text-gray-800 p-6 space-y-12">
@@ -15,19 +27,19 @@ export default function ProchesApp() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <Section
+        <FeatureCard
+          label="Fonctionnalité"
           title="📦 Ma cave à vin"
-          description="Ajoutez, organisez et suivez vos références, millésimes et stocks."
           href="#pro"
         />
-        <Section
+        <FeatureCard
+          label="Fonctionnalité"
           title="🧾 Créer ma carte"
-          description="Générez une carte des vins claire, adaptée à votre sélection."
           href="#particuliers"
         />
-        <Section
+        <FeatureCard
+          label="Fonctionnalité"
           title="🛍️ Vente à emporter"
-          description="Proposez certains vins à vos clients à prix spécial ou par carton."
           href="#consulting"
         />
       </div>
@@ -35,14 +47,5 @@ export default function ProchesApp() {
   );
 }
 
-function Section({ title, description, href }) {
-  return (
-    <a
-      href={href}
-      className="block p-6 bg-white border border-[#6D1C35]/10 rounded-2xl shadow hover:shadow-lg hover:border-[#6D1C35]/30 transition"
-    >
-      <h3 className="text-xl font-semibold text-[#6D1C35] mb-2">{title}</h3>
-      <p className="text-gray-600 text-sm">{description}</p>
-    </a>
   );
 }
