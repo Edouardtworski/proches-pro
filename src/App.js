@@ -10,9 +10,9 @@ function FeatureCard({ title, label, href }) {
   );
 }
 
-export default function ProchesApp() {
+export default function App() {
   return (
-    <div className="min-h-screen bg-[#FAF7EF] text-gray-800 p-6 space-y-12">
+    <div className="min-h-screen text-gray-800 p-6 space-y-12 bg-[#FAF7EF]">
       <header className="flex items-center justify-start mb-6">
         <img src="/logo192.png" alt="Proches Logo" className="h-20" />
       </header>
